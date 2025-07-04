@@ -1,0 +1,105 @@
+/* รีเซตพื้นฐาน */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background: linear-gradient(rgba(27,20,10,0.6), rgba(27,20,10,0.6)),
+              url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1920&q=80") no-repeat center center fixed;
+  background-size: cover;
+  color: #f3e9dc;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+a {
+  color: #d4c4a8;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.95);
+  color: #331a00;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #6b4f3b;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto 25px auto;
+  width: 100%;
+  max-width: 100%;
+  height: 400px; /* กำหนดความสูงแน่นอน */
+  object-fit: cover; /* ครอบภาพโดยไม่บิด */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #7a5c3b;
+  border-bottom: 2px solid #d4c4a8;
+  padding-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  padding-left: 20px;
+  position: relative;
+  color: #4a3923;
+}
+
+ul li::before {
+  content: "🔹";
+  position: absolute;
+  left: 0;
+  color: #a67c00;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #4a3923;
+}
+
+.back-link {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6b4f3b;
+}
+
+.back-link:hover {
+  color: #a67c00;
+}

@@ -1,0 +1,155 @@
+/* รีเซตพื้นฐาน */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Kanit', sans-serif;
+  background: #2f1b0c;
+  overflow: hidden;
+  color: #f3e9dc;
+}
+
+.about-image-wrapper {
+  width: 200px;     /* ความกว้าง */
+  height: 200px;    /* ความสูงเท่ากับความกว้าง */
+  overflow: hidden;
+  border-radius: 50%;  /* ทำให้เป็นวงกลม */
+  margin: 20px auto;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;      /* กำหนดให้สูงเท่ากับกล่อง */
+  object-fit: cover; /* ครอบรูปเต็มวงกลมโดยไม่เสียสัดส่วน */
+  border-radius: 50%; /* ทำให้รูปเองก็เป็นวงกลม */
+  display: block;
+}
+
+
+
+.contact-container {
+  position: relative;
+  z-index: 10;
+  max-width: 500px;
+  margin: 80px auto;
+  background: rgba(43, 29, 11, 0.85);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #d4c4a8;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #d4c4a8;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Kanit', sans-serif;
+  background: #fff8e1;
+  color: #3e2c0f;
+  resize: vertical;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #d4c4a8;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a67c00;
+  border: none;
+  border-radius: 8px;
+  color: #2f1b0c;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4c4a8;
+}
+
+/* container สำหรับเมล็ดกาแฟลอย */
+#beans-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* ไม่ให้รบกวนการคลิก */
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* เมล็ดกาแฟ */
+.coffee-bean {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Coffee_bean_icon.svg/1200px-Coffee_bean_icon.svg.png') no-repeat center/contain;
+  opacity: 0.7;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+.contact-info {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  font-size: 1.2rem;
+  color: #6b4f3b;
+}
+
+.contact-info a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b4f3b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #a67c00;
+}
+
+.contact-info i {
+  font-size: 1.5rem;
+}
+
+
+/* Animation ลอยขึ้น */
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-20vh) rotate(360deg);
+    opacity: 0;
+  }
+}
