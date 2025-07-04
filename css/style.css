@@ -57,16 +57,16 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.2s ease;
-  display: inline-block; /* เพื่อให้ transform ใช้ได้ */
+  display: inline-block;
 }
 
 .nav-links li a:hover {
   text-decoration: underline;
   color: #d4c4a8;
-  transform: translateY(-4px) scale(1.05); /* ยกขึ้น 4px และขยาย 5% */
+  transform: translateY(-4px) scale(1.05);
 }
 
-/* ส่วนเนื้อหาทั้งหมดมี padding */
+/* เนื้อหาหลัก */
 main {
   padding: 20px;
 }
@@ -108,16 +108,15 @@ h1 {
   transform: scale(1.03);
 }
 
-/* ใช้ Grid layout เรียงการ์ด 4 คอลัมน์ */
+/* ใช้ Grid layout เรียงการ์ด */
 .coffee-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์เท่าๆกัน */
-  gap: 24px; /* ช่องว่างระหว่างการ์ด */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   justify-content: center;
   padding: 10px 20px;
 }
 
-/* สไตล์การ์ดกาแฟ */
 .coffee-card {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
@@ -128,8 +127,8 @@ h1 {
   color: inherit;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%; /* เต็มความกว้างคอลัมน์ */
-  max-width: 400px; /* ขนาดใหญ่ขึ้น */
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -159,10 +158,10 @@ h1 {
   display: none;
 }
 
-/* Responsive สำหรับหน้าจอขนาดกลาง */
+/* Responsive สำหรับหน้าจอกลาง */
 @media (max-width: 992px) {
   .coffee-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
+    grid-template-columns: repeat(2, 1fr);
   }
   .coffee-card {
     max-width: 90%;
@@ -172,9 +171,60 @@ h1 {
 /* Responsive สำหรับหน้าจอเล็ก */
 @media (max-width: 600px) {
   .coffee-container {
-    grid-template-columns: 1fr; /* คอลัมน์เดียว */
+    grid-template-columns: 1fr;
   }
   .coffee-card {
     max-width: 100%;
+  }
+}
+
+/* ✅ Responsive เพิ่มเติมสำหรับมือถือเล็ก */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #search {
+    width: 90%;
+    padding: 12px 20px 12px 50px;
+    font-size: 16px;
+    background-position: 16px center, 46px center;
+    background-size: 20px 20px, 1px 50%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .coffee-card {
+    padding: 16px;
+  }
+
+  .coffee-card img {
+    height: 120px;
+  }
+
+  .coffee-card h3 {
+    font-size: 16px;
+  }
+
+  .coffee-card p {
+    font-size: 13px;
   }
 }
