@@ -9,9 +9,10 @@ body, html {
   height: 100%;
   font-family: 'Kanit', sans-serif;
   background: #2f1b0c;
-  overflow: hidden;
+  overflow-x: hidden; 
   color: #f3e9dc;
 }
+
 
 .about-image-wrapper {
   width: 200px;     /* ความกว้าง */
