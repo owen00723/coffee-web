@@ -178,7 +178,7 @@ h1 {
   }
 }
 
-/* ✅ Responsive เพิ่มเติมสำหรับมือถือเล็ก */
+/* Responsive สำหรับมือถือเล็ก */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -191,9 +191,24 @@ h1 {
     text-align: center;
   }
 
+  /* ซ่อนเมนูโดยดีฟอลต์ */
   .nav-links {
     flex-direction: column;
     gap: 10px;
+    display: none;
+  }
+  /* แสดงเมนูเมื่อมีคลาส active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #f3e9dc;
+    font-size: 28px;
+    cursor: pointer;
   }
 
   #search {
@@ -227,4 +242,9 @@ h1 {
   .coffee-card p {
     font-size: 13px;
   }
+}
+
+/* ซ่อนปุ่ม hamburger บน desktop */
+.menu-toggle {
+  display: none;
 }
