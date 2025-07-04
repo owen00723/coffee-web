@@ -103,6 +103,29 @@ button:hover {
   z-index: 1;
 }
 
+.back-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a67c00;
+  color: #2f1b0c;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-link:hover {
+  background-color: #d4c4a8;
+  color: #4a2e00;
+}
+
+
 /* เมล็ดกาแฟ */
 .coffee-bean {
   position: absolute;
